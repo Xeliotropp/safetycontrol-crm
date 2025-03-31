@@ -37,7 +37,7 @@
                                         <td id="id_num"><a
                                                 href="{{ url('/crm/pages/tasks/view/' . $task->id) }}">{{ sprintf('%04d', $task->id) }}</a>
                                         </td>
-                                        <td id="client">{{ $task->client->client }}</td>
+                                        <td id="client">{{ $task->client->client ?? ''}}</td>
                                         <td>{{ $task->contragent }}</td>
                                         <td value="{{ $task->nextMeasurement }}">{{ $task->nextMeasurement }}</td>
                                         <td>{{ $task->certificateNumber }}</td>

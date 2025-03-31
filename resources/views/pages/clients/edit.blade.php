@@ -127,26 +127,28 @@
     document.addEventListener('DOMContentLoaded', function() {
     const objectsContainer = document.getElementById('objectsContainer');
     const addObjectButton = document.getElementById('addObject');
-    let objectCount = 1;
+    
+    // Initialize objectCount based on existing objects
+    let objectCount = objectsContainer.querySelectorAll('.object-group').length;
 
     addObjectButton.addEventListener('click', function() {
-        objectCount++;
         const newObjectGroup = document.createElement('div');
         newObjectGroup.className = 'row object-group';
         newObjectGroup.innerHTML = `
             <div class="col-md-6 mb-3">
-                <label for="objects[${objectCount-1}][object]" class="fw-bold">Обект ${objectCount}*</label>
-                <input name="objects[${objectCount-1}][object]" type="text" class="form-control" required>
+                <label for="objects[${objectCount}][object]" class="fw-bold">Обект ${objectCount + 1}*</label>
+                <input name="objects[${objectCount}][object]" type="text" class="form-control" required>
             </div>
             <div class="col-md-5 mb-3">
-                <label for="objects[${objectCount-1}][object_address]">Адрес за обект ${objectCount}</label>
-                <input name="objects[${objectCount-1}][object_address]" type="text" class="form-control">
+                <label for="objects[${objectCount}][object_address]">Адрес за обект ${objectCount + 1}</label>
+                <input name="objects[${objectCount}][object_address]" type="text" class="form-control">
             </div>
             <div class="col-md-1 mb-3 d-flex align-items-end">
                 <button type="button" class="btn btn-danger remove-object">Премахни</button>
             </div>
         `;
         objectsContainer.appendChild(newObjectGroup);
+        objectCount++;
     });
 
     objectsContainer.addEventListener('click', function(e) {

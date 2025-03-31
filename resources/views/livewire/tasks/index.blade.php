@@ -42,9 +42,8 @@
                                         <button  wire:click="refreshPage" class="btn btn-white border border-2 border-end-0 rounded-0">
                                             <i class="bi bi-search"></i>
                                         </button>
-                                        <input wire:model.debounce.50ms="filters.client_id" type="text"
-                                            class="form-control border border-2 border-start-0 rounded-0 filter-input"
-                                            id="client">
+                                        <input wire:model.debounce.50ms="filters.client_id" type="text" class="form-control border border-2 border-start-0 rounded-0 filter-input"
+                                                                                                        id="client"/>
                                     </div>
                                 </th>
                                 <th>Обект
@@ -170,7 +169,7 @@
                                     <td><a
                                             href="{{ url('/crm/pages/tasks/view/' . $task->id) }}">{{ sprintf('%04d', $task->id) }}</a>
                                     </td>
-                                    <td>{{ $task->client->client }}</td>
+                                    <td>{{ $task->client->client ?? '' }}</td>
                                     <td>{{ $task->client_address_1 }}</td>
                                     <td>{{ $task->dateOfMeasurement }}</td>
                                     <td>{{ $task->certificateNumber }}</td>

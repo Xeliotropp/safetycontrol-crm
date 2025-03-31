@@ -32,39 +32,45 @@
                                     </div>
                                     <div class="d-flex gap-5">
                                         <div class="mb-3 pe-5">
-                                            <label for="certificateDate" class="fw-bold">Дата на измерване</label>
-                                            <input id="dateOfMeasurement" name="dateOfMeasurement" type="date" class="form-control" value="{{ old('dateOfMeasurement') }}">
+                                            <label for="dateOfMeasurement" class="fw-bold">Дата на измерване</label>
+                                            <input id="dateOfMeasurement" name="dateOfMeasurement" type="date" 
+                                                class="form-control" value="{{ old('dateOfMeasurement') }}">
                                             @error('dateOfMeasurement')
                                                 <small id="certificateDateError" class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
+                                    
                                         <div class="ms-4 ps-4">
                                             <label class="fw-bold">Параметри на измерването</label>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap"
-                                                id="first-section">
+                                    
+                                            <section class="d-flex justify-content-end gap-2" id="first-section">
                                                 <div>
                                                     <label for="mk">МКтопъл</label>
                                                     <input id="mk" name="mk" type="checkbox" {{ old('mk') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
                                                 <div>
-                                                    <label for="mk">МКстуден</label>
+                                                    <label for="mkcold">МКстуден</label>
                                                     <input id="mkcold" name="mkcold" type="checkbox" {{ old('mkcold') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
                                                 <div>
                                                     <label for="osv">ОСВ</label>
                                                     <input id="osv" name="osv" type="checkbox" {{ old('osv') ? 'checked' : '' }}>
                                                 </div>
                                                 <div>
-                                                    <label for="osv">ОСВ евак.</label>
-                                                    <input id="osvEvak" name="osv" type="checkbox" {{ old('osvEvak') ? 'checked' : '' }}>
+                                                    <label for="osvEvak">ОСВ евак.</label>
+                                                    <input id="osvEvak" name="osvEvak" type="checkbox" {{ old('osvEvak') ? 'checked' : '' }}>
                                                 </div>
                                             </section>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap"
-                                                id="second-section">
+                                    
+                                            <section class="d-flex justify-content-end gap-2" id="second-section">
+                                                <div></div>
                                                 <div>
                                                     <label for="sh">Шраб. среда</label>
                                                     <input id="sh" name="sh" type="checkbox" {{ old('sh') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
                                                 <div>
                                                     <label for="shobSgr">Шоб. сгр.</label>
                                                     <input id="shobSgr" name="shobSgr" type="checkbox" {{ old('shobSgr') ? 'checked' : '' }}>
@@ -78,29 +84,40 @@
                                                     <input id="vent" name="vent" type="checkbox" {{ old('vent') ? 'checked' : '' }}>
                                                 </div>
                                             </section>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap"
-                                                id="third-section">
+                                    
+                                            <section class="d-flex justify-content-end gap-2" id="third-section">
                                                 <div>
                                                     <label for="klim">Клим</label>
                                                     <input id="klim" name="klim" type="checkbox" {{ old('klim') ? 'checked' : '' }}>
                                                 </div>
                                                 <div>
                                                     <label for="f0">F-0</label>
-                                                    <input id="f0" name="f0" type="checkbox"
-                                                        {{ old('f0') ? 'checked' : '' }}>
+                                                    <input id="f0" name="f0" type="checkbox" {{ old('f0') ? 'checked' : '' }}>
                                                 </div>
                                                 <div>
-                                                    <label for="z">Z</label>
+                                                    <label for="z">&nbsp;Z</label>
                                                     <input id="z" name="z" type="checkbox" {{ old('z') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
                                                 <div>
                                                     <label for="m">M</label>
                                                     <input id="m" name="m" type="checkbox" {{ old('m') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                    
                                                 <div>
                                                     <label for="izol">Изол</label>
                                                     <input id="izol" name="izol" type="checkbox" {{ old('izol') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
+                                    
                                                 <div>
                                                     <label for="dtz">ДТЗ</label>
                                                     <input id="dtz" name="dtz" type="checkbox" {{ old('dtz') ? 'checked' : '' }}>
@@ -111,8 +128,7 @@
                                     <p></p>
                                     <div class="col-md-12 mb-3">
                                         <label for="wayOfShowingDocumentation" class="fw-bold">Начин на предоставяне на документация</label>
-                                        <select name="wayOfShowingDocumentation" id="wayOfShowingDocumentation"
-                                            class="form-control">
+                                        <select name="wayOfShowingDocumentation" id="wayOfShowingDocumentation" class="form-control">
                                             <option value="" class="form-control">-- Изберете начин на предоставяне на документация --</option>
                                             <option value="По куриер" class="form-control">По куриер</option>
                                             <option value="По Борислав" class="form-control">По Борислав</option>
@@ -120,12 +136,12 @@
                                             <option value="По Ники" class="form-control">По Ники</option>
                                             <option value="По Данката" class="form-control">По Данката</option>
                                         </select>
-
+                                    
                                         <div id="courrierDetails" style="display: none">
                                             <label for="courrierDetails">Адрес за доставка</label>
                                             <input type="text" name="courrierDetails" class="form-control" value="{{ old('courrierDetails') }}">
                                         </div>
-
+                                    
                                         <small id="wayOfShowingDocumentationError" class="text-danger"></small>
                                     </div>
                                     <div class="row">
@@ -145,14 +161,15 @@
                                     <br>
                                     <p class="fw-bold text-center">Следващо измерване</p>
                                     <div class="h-25 d-flex gap-5">
-                                        <div class="mb-3 pe-5">
-                                            <label for="nextMeasurement" class="fw-bold">Дата на следващо измерване</label>
-                                            <input id="nextMeasurementDate" name="nextMeasurement" type="date" class="form-control" value="{{ old('nextMeasurement') }}">
+                                        <div class="mb-2 pe-5">
+                                            <label for="nextMeasurementDate" class="fw-bold">Дата на следващо<br> измерване</label>
+                                            <input id="nextMeasurementDate" name="nextMeasurement" type="date" 
+                                                class="form-control" value="{{ old('nextMeasurement') }}">
                                             <small id="nextMeasurementDateError" class="text-danger"></small>
                                         </div>
                                         <div class="ms-4 ps-4">
-                                            <label class = "fw-bold">Параметри на следващото измерване</label>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                            <label class="fw-bold">Параметри на следващото измерване</label>
+                                            <section class="d-flex justify-content-end gap-2">
                                                 <div>
                                                     <label for="mkNext">МКтопъл</label>
                                                     <input id="mkNext" name="mkNext" type="checkbox" {{ old('mkNext') ? 'checked' : '' }}>
@@ -170,7 +187,8 @@
                                                     <input id="osvEvakNext" name="osvEvakNext" type="checkbox" {{ old('osvEvakNext') ? 'checked' : '' }}>
                                                 </div>
                                             </section>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                            <section class="d-flex justify-content-end gap-2">
+                                                &emsp;
                                                 <div>
                                                     <label for="shNext">Шраб. среда</label>
                                                     <input id="shNext" name="shNext" type="checkbox" {{ old('shNext') ? 'checked' : '' }}>
@@ -180,15 +198,15 @@
                                                     <input id="shobSgrNext" name="shobSgrNext" type="checkbox" {{ old('shobSgrNext') ? 'checked' : '' }}>
                                                 </div>
                                                 <div>
-                                                    <label for="shOkolSrNext">Шокол. ср.</label>
-                                                    <input id="shOkolSrNext" name="shOkolSrNext" type="checkbox" {{ old('shOkolSrNext') ? 'checked' : '' }}>
+                                                    <label for="shokolSrNext">Шокол. ср.</label>
+                                                    <input id="shokolSrNext" name="shokolSrNext" type="checkbox" {{ old('shokolSrNext') ? 'checked' : '' }}>
                                                 </div>
                                                 <div>
                                                     <label for="ventNext">Вент</label>
                                                     <input id="ventNext" name="ventNext" type="checkbox" {{ old('ventNext') ? 'checked' : '' }}>
                                                 </div>
                                             </section>
-                                            <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                            <section class="d-flex justify-content-end gap-2">
                                                 <div>
                                                     <label for="klimNext">Клим</label>
                                                     <input id="klimNext" name="klimNext" type="checkbox" {{ old('klimNext') ? 'checked' : '' }}>
@@ -201,10 +219,20 @@
                                                     <label for="zNext">Z</label>
                                                     <input id="zNext" name="zNext" type="checkbox" {{ old('zNext') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
                                                 <div>
                                                     <label for="mNext">M</label>
                                                     <input id="mNext" name="mNext" type="checkbox" {{ old('mNext') ? 'checked' : '' }}>
                                                 </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
                                                 <div>
                                                     <label for="izolNext">Изол</label>
                                                     <input id="izolNext" name="izolNext" type="checkbox" {{ old('izolNext') ? 'checked' : '' }}>
@@ -214,7 +242,6 @@
                                                     <input id="dtzNext" name="dtzNext" type="checkbox" {{ old('dtzNext') ? 'checked' : '' }}>
                                                 </div>
                                             </section>
-
                                         </div>
                                     </div>
                                 </div>

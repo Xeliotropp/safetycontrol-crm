@@ -37,170 +37,207 @@
                                         @enderror
                                     </div>
                                     <div class="ms-4 ps-4">
-                                        <label>Параметри на измерването</label>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                        <label class="fw-bold">Параметри на измерването</label>
+                                    
+                                        <section class="d-flex justify-content-end gap-2" id="first-section">
                                             <div>
                                                 <label for="mk">МКтопъл</label>
-                                                <input id="mk" name="mk" type="checkbox" {{old('mk', $task->mk == '1' ? 'checked':'')}} disabled>
+                                                <input id="mk" name="mk" type="checkbox" {{ old('mk', $task->mk) ? 'checked' : '' }}  disabled>
                                             </div>
+                                            <div></div>
                                             <div>
                                                 <label for="mkcold">МКстуден</label>
-                                                <input id="mkcold" name="mkcold" type="checkbox" {{old('mkcold', $task->mkcold == '1' ? 'checked':'')}} disabled>
+                                                <input id="mkcold" name="mkcold" type="checkbox" {{ old('mkcold', $task->mkcold) ? 'checked' : '' }} disabled>
                                             </div>
+                                            <div></div>
                                             <div>
                                                 <label for="osv">ОСВ</label>
-                                                <input id="osv" name="osv" type="checkbox" {{old('osv', $task->osv == '1' ? 'checked':'')}} disabled>
+                                                <input id="osv" name="osv" type="checkbox" {{ old('osv', $task->osv) ? 'checked' : '' }} disabled>
                                             </div>
                                             <div>
                                                 <label for="osvEvak">ОСВ евак.</label>
-                                                <input id="osvEvak" name="osvEvak" type="checkbox" {{old('osvEvak', $task->osvEvak == '1' ? 'checked':'')}} disabled>
+                                                <input id="osvEvak" name="osvEvak" type="checkbox" {{ old('osvEvak', $task->osvEvak) ? 'checked' : '' }} disabled>
                                             </div>
                                         </section>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                    
+                                        <section class="d-flex justify-content-end gap-2" id="second-section">
+                                            <div></div>
                                             <div>
                                                 <label for="sh">Шраб. среда</label>
-                                                <input id="sh" name="sh" type="checkbox" {{old('sh', $task->sh == '1' ? 'checked':'')}} disabled>
+                                                <input id="sh" name="sh" type="checkbox" {{ old('sh', $task->sh) ? 'checked' : '' }} disabled>
                                             </div>
+                                            <div></div>
                                             <div>
                                                 <label for="shobSgr">Шоб. сгр.</label>
-                                                <input id="shobSgr" name="shobSgr" type="checkbox" {{old('shobSgr', $task->shobSgr == '1' ? 'checked':'')}} disabled>
+                                                <input id="shobSgr" name="shobSgr" type="checkbox" {{ old('shobSgr', $task->shobSgr) ? 'checked' : '' }} disabled>
                                             </div>
                                             <div>
                                                 <label for="shokolSr">Шокол. ср.</label>
-                                                <input id="shokolSr" name="shokolSr" type="checkbox" {{old('shokolSr', $task->shokolSr == '1' ? 'checked':'')}} disabled>
+                                                <input id="shokolSr" name="shokolSr" type="checkbox" {{ old('shokolSr', $task->shokolSr) ? 'checked' : '' }} disabled>
                                             </div>
                                             <div>
                                                 <label for="vent">Вент</label>
-                                                <input id="vent" name="vent" type="checkbox" {{old('vent', $task->vent == '1' ? 'checked':'')}} disabled>
+                                                <input id="vent" name="vent" type="checkbox" {{ old('vent', $task->vent) ? 'checked' : '' }} disabled>
                                             </div>
                                         </section>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
+                                    
+                                        <section class="d-flex justify-content-end gap-2" id="third-section">
                                             <div>
                                                 <label for="klim">Клим</label>
-                                                <input id="klim" name="klim" type="checkbox" {{old('klim', $task->klim == '1' ? 'checked':'')}} disabled>
+                                                <input id="klim" name="klim" type="checkbox" {{ old('klim', $task->klim) ? 'checked' : '' }} disabled>
                                             </div>
                                             <div>
                                                 <label for="f0">F-0</label>
-                                                <input id="f0" name="f0" type="checkbox" {{old('f0', $task->f0 == '1' ? 'checked':'')}} disabled>
+                                                <input id="f0" name="f0" type="checkbox" {{ old('f0', $task->f0) ? 'checked' : '' }} disabled>
                                             </div>
                                             <div>
-                                                <label for="z">Z</label>
-                                                <input id="z" name="z" type="checkbox" {{old('z', $task->z == '1' ? 'checked':'')}} disabled>
+                                                <label for="z">&nbsp;Z</label>
+                                                <input id="z" name="z" type="checkbox" {{ old('z', $task->z) ? 'checked' : '' }} disabled>
                                             </div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
                                             <div>
                                                 <label for="m">M</label>
-                                                <input id="m" name="m" type="checkbox" {{old('m', $task->m == '1' ? 'checked':'')}} disabled>
+                                                <input id="m" name="m" type="checkbox" {{ old('m', $task->m) ? 'checked' : '' }} disabled>
                                             </div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                    
                                             <div>
                                                 <label for="izol">Изол</label>
-                                                <input id="izol" name="izol" type="checkbox" {{old('izol', $task->izol == '1' ? 'checked':'')}} disabled>
+                                                <input id="izol" name="izol" type="checkbox" {{ old('izol', $task->izol) ? 'checked' : '' }} disabled>
                                             </div>
+                                            <div></div>
+                                    
                                             <div>
                                                 <label for="dtz">ДТЗ</label>
-                                                <input id="dtz" name="dtz" type="checkbox" {{old('dtz', $task->dtz == '1' ? 'checked':'')}} disabled>
+                                                <input id="dtz" name="dtz" type="checkbox" {{ old('dtz', $task->dtz) ? 'checked' : '' }} disabled>
                                             </div>
                                         </section>
                                     </div>
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="wayOfShowingDocumentation" class="fw-bold">Начин на предоставяне на документация</label>
-                                    <input type="text" id="wayOfShowingDocumentation" name="wayOfShowingDocumentation" class="form-control" value="{{old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation)}}" readonly>
-                                    <small id="wayOfShowingDocumentationError" class="text-danger"></small>
-                                </div>
-                                @if($task->wayOfShowingDocumentation == 'По куриер')
-                                    <div id="courrierDetails">
-                                        <label for="courrierDetails">Адрес за доставка</label>
-                                        <input type="text" name="courrierDetails" class="form-control" value="{{$task->courrierDetails}}" readonly>
                                     </div>
-                                @endif
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="certificateNumber" class="fw-bold">Номер на сертификат*</label>
-                                        <input id="certificateNumber" name="certificateNumber" type="text" class="form-control" value="{{old('certificateNumber', $task->certificateNumber)}}" readonly>
-                                        <small id="certificateNumberError" class="text-danger"></small>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="wayOfShowingDocumentation" class="fw-bold">Начин на предоставяне на документация</label>
+                                        <select name="wayOfShowingDocumentation" id="wayOfShowingDocumentation" class="form-control" disabled>
+                                            <option value="" class="form-control" readonly>-- Изберете начин на предоставяне на документация --</option>
+                                            <option value="По куриер" class="form-control" {{ old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation) == 'По куриер' ? 'selected' : '' }}>По куриер</option>
+                                            <option value="По Борислав" class="form-control" {{ old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation) == 'По Борислав' ? 'selected' : '' }}>По Борислав</option>
+                                            <option value="По Пламен" class="form-control" {{ old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation) == 'По Пламен' ? 'selected' : '' }}>По Пламен</option>
+                                            <option value="По Ники" class="form-control" {{ old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation) == 'По Ники' ? 'selected' : '' }}>По Ники</option>
+                                            <option value="По Данката" class="form-control" {{ old('wayOfShowingDocumentation', $task->wayOfShowingDocumentation) == 'По Данката' ? 'selected' : '' }}>По Данката</option>
+                                        </select>
+                                    
+                                        <div id="courrierDetails" style="display: none">
+                                            <label for="courrierDetails">Адрес за доставка</label>
+                                            <input type="text" name="courrierDetails" class="form-control" value="{{ old('courrierDetails', $task->courrierDetails) }}">
+                                        </div>
+                                    
+                                        <small id="wayOfShowingDocumentationError" class="text-danger"></small>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="certificateDate" class="fw-bold">Дата на сертификат*</label>
-                                        <input id="certificateDate" name="certificateDate" type="date" class="form-control" value="{{old('certificateDate', $task->certificateDate)}}" readonly>
-                                        <small id="certificateDateError" class="text-danger"></small>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="certificateNumber" class="fw-bold">Номер на сертификат</label>
+                                            <input id="certificateNumber" name="certificateNumber" type="text" class="form-control" value="{{ old('certificateNumber', $task->certificateNumber) }}">
+                                            <small id="certificateNumberError" class="text-danger"></small>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="certificateDate" class="fw-bold">Дата на сертификат</label>
+                                            <input id="certificateDate" name="certificateDate" type="date" class="form-control" value="{{ old('certificateDate', $task->certificateDate) }}">
+                                            <small id="certificateDateError" class="text-danger"></small>
+                                        </div>
                                     </div>
-                                </div>
-                                <br>
-                                <hr>
-                                <br>
-                                <p class="fw-bold text-center">Следващо измерване</p>
-                                <div class="h-25 d-flex gap-5">
-                                    <div class="mb-3 pe-5">
-                                        <label for="nextMeasurement" class="fw-bold">Дата на следващо измерване*</label>
-                                        <input id="nextMeasurementDate" name="nextMeasurement" type="date" class="form-control" value="{{old('nextMeasurement', $task->nextMeasurement)}}" readonly>
-                                        <small id="nextMeasurementDateError" class="text-danger"></small>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <p class="fw-bold text-center">Следващо измерване</p>
+                                    <div class="h-25 d-flex gap-5">
+                                        <div class="mb-2 pe-5">
+                                            <label for="nextMeasurementDate" class="fw-bold">Дата на следващо<br> измерване</label>
+                                            <input id="nextMeasurementDate" name="nextMeasurement" type="date" class="form-control" value="{{ old('nextMeasurement', $task->nextMeasurement) }}" disabled>
+                                            <small id="nextMeasurementDateError" class="text-danger"></small>
+                                        </div>
+                                        <div class="ms-4 ps-4">
+                                            <label class="fw-bold">Параметри на следващото измерване</label>
+                                            <section class="d-flex justify-content-end gap-2">
+                                                <div>
+                                                    <label for="mkNext">МКтопъл</label>
+                                                    <input id="mkNext" name="mkNext" type="checkbox" {{ old('mkNext', $task->mkNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="mkcoldNext">МКстуден</label>
+                                                    <input id="mkcoldNext" name="mkcoldNext" type="checkbox" {{ old('mkcoldNext', $task->mkcoldNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="osvNext">ОСВ</label>
+                                                    <input id="osvNext" name="osvNext" type="checkbox" {{ old('osvNext', $task->osvNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="osvEvakNext">ОСВ евак.</label>
+                                                    <input id="osvEvakNext" name="osvEvakNext" type="checkbox" {{ old('osvEvakNext', $task->osvEvakNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex justify-content-end gap-2">
+                                                &emsp;
+                                                <div>
+                                                    <label for="shNext">Шраб. среда</label>
+                                                    <input id="shNext" name="shNext" type="checkbox" {{ old('shNext', $task->shNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="shobSgrNext">Шоб. сгр.</label>
+                                                    <input id="shobSgrNext" name="shobSgrNext" type="checkbox" {{ old('shobSgrNext', $task->shobSgrNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="shokolSrNext">Шокол. ср.</label>
+                                                    <input id="shokolSrNext" name="shokolSrNext" type="checkbox" {{ old('shokolSrNext', $task->shokolSrNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="ventNext">Вент</label>
+                                                    <input id="ventNext" name="ventNext" type="checkbox" {{ old('ventNext', $task->ventNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex justify-content-end gap-2">
+                                                <div>
+                                                    <label for="klimNext">Клим</label>
+                                                    <input id="klimNext" name="klimNext" type="checkbox" {{ old('klimNext', $task->klimNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="f0Next">F-0</label>
+                                                    <input id="f0Next" name="f0Next" type="checkbox" {{ old('f0Next', $task->f0Next) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="zNext">Z</label>
+                                                    <input id="zNext" name="zNext" type="checkbox" {{ old('zNext', $task->zNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div>
+                                                    <label for="mNext">M</label>
+                                                    <input id="mNext" name="mNext" type="checkbox" {{ old('mNext', $task->mNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div>
+                                                    <label for="izolNext">Изол</label>
+                                                    <input id="izolNext" name="izolNext" type="checkbox" {{ old('izolNext', $task->izolNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                                <div>
+                                                    <label for="dtzNext">ДТЗ</label>
+                                                    <input id="dtzNext" name="dtzNext" type="checkbox" {{ old('dtzNext', $task->dtzNext) ? 'checked' : '' }} disabled>
+                                                </div>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="ms-4 ps-4">
-                                        <label>Параметри на следващото измерване</label>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
-                                            <div>
-                                                <label for="mkNext">МКтопъл</label>
-                                                <input id="mkNext" name="mkNext" type="checkbox" {{old('mkNext', $task->mkNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="mkcoldNext">МКстуден</label>
-                                                <input id="mkcoldNext" name="mkcoldNext" type="checkbox" {{old('mkcoldNext', $task->mkcoldNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="osvNext">ОСВ</label>
-                                                <input id="osvNext" name="osvNext" type="checkbox" {{old('osvNext', $task->osvNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="osvEvakNext">ОСВ евак.</label>
-                                                <input id="osvEvakNext" name="osvEvakNext" type="checkbox" {{old('osvEvakNext', $task->osvEvakNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
-                                            <div>
-                                                <label for="shNext">Шраб. среда</label>
-                                                <input id="shNext" name="shNext" type="checkbox" {{old('shNext', $task->shNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="shobSgrNext">Шоб. сгр.</label>
-                                                <input id="shobSgrNext" name="shobSgrNext" type="checkbox" {{old('shobSgrNext', $task->shobSgrNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="shOkolSrNext">Шокол. ср.</label>
-                                                <input id="shOkolSrNext" name="shOkolSrNext" type="checkbox" {{old('shOkolSrNext', $task->shOkolSrNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="ventNext">Вент</label>
-                                                <input id="ventNext" name="ventNext" type="checkbox" {{old('ventNext', $task->ventNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex justify-content-start gap-3 flex-wrap">
-                                            <div>
-                                                <label for="klimNext">Клим</label>
-                                                <input id="klimNext" name="klimNext" type="checkbox" {{old('klimNext', $task->klimNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="f0Next">F-0</label>
-                                                <input id="f0Next" name="f0Next" type="checkbox" {{old('f0Next', $task->f0Next == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="zNext">Z</label>
-                                                <input id="zNext" name="zNext" type="checkbox" {{old('zNext', $task->zNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="mNext">M</label>
-                                                <input id="mNext" name="mNext" type="checkbox" {{old('mNext', $task->mNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="izolNext">Изол</label>
-                                                <input id="izolNext" name="izolNext" type="checkbox" {{old('izolNext', $task->izolNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                            <div>
-                                                <label for="dtzNext">ДТЗ</label>
-                                                <input id="dtzNext" name="dtzNext" type="checkbox" {{old('dtzNext', $task->dtzNext == '1' ? 'checked':'')}} disabled>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
                             </div>
                             <!-- vertical line-->
                             <div class="vr mx-5">&nbsp;</div>
